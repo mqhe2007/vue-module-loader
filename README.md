@@ -28,7 +28,7 @@ const moduleByUrl = {
   a: 'http://xx.xxx.com/a.js',
   b: 'http://xx.xxx.com/b.js'
 }
-moduleByLocal = require('./module-a.js')
+const moduleByLocal = require('./module-a.js')
 app.$moduleLoader(moduleByUrl)
 app.$moduleLoader(moduleByLocal)
 ```
