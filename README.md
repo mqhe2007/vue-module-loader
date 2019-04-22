@@ -1,30 +1,34 @@
-# Admincraft
+# vue-module-loader
 
-Admincraft是一个支持模块化分布部署和加载的vue admin。（[微前端？](https://www.thoughtworks.com/radar/techniques/micro-frontends)）
+可以远程加载一个 [vue 模块](https://mqhe2007.github.io/admincraft/guide/#%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97)。
 
-Admincraft is a vue admin that supports modular distribution deployment and loading. ([Micro frontends?](https://www.thoughtworks.com/radar/techniques/micro-frontends))
+Can load a [vue module](https://mqhe2007.github.io/admincraft/guide/#%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97) remotely.
 
-Admincraft 名称借鉴自“Minecraft”。也是希望 Admincraft 能够像“Minecraft”一样成为一个灵活强大的自由组合工具，为中后台应用的快速开发寻找一个新的方式。
+更强大的分布式前端开发架构，请使用[Admincraft](https://mqhe2007.github.io/admincraft/)
+
+More powerful distributed front-end development architecture，please use [Admincraft](https://mqhe2007.github.io/admincraft/)
 
 ## 安装
 
 ```
-yarn add admincraft
+yarn add vue-module-loader
 ```
 
-## 快速开始
+## 使用
 
-``` javascript
-
-// 导入Admincraft构造函数
-import Admincraft from 'admincraft'
-// 创建挂载DOM
-let appElement = document.createElement('div')
-document.body.appendChild(appElement)
-// 实例化
-let admincraft = new Admincraft()
-admincraft.$mount(appElement)
-
+```javascript
+import vueModuleLoader from 'vue-module-loader'
+Vue.use(vueModuleLoader)
+let app = new Vue({
+  router,
+  store,
+  render: h => h('h1', 'vue-module-loader')
+})
+const moduleByUrl = {
+  a: 'http://xx.xxx.com/a.js',
+  b: 'http://xx.xxx.com/b.js'
+}
+moduleByLocal = require('./module-a.js')
+app.$moduleLoader(moduleByUrl)
+app.$moduleLoader(moduleByLocal)
 ```
-
-详细用法请阅读[使用文档](https://mqhe2007.github.io/admincraft/)

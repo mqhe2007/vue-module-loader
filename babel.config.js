@@ -9,9 +9,7 @@ module.exports = function(api) {
       }
     ]
   ]
-  const plugins = ['@babel/plugin-syntax-dynamic-import']
   return {
-    presets,
-    plugins
+    presets
   }
 }
