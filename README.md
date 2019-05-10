@@ -17,7 +17,7 @@ yarn add vue-module-loader
 ## 使用
 
 
-1. 编写模块
+1. [编写模块](https://mqhe2007.github.io/admincraft/guide/#%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97)代码
 
 ```javascript
 import routes from './routes.js'
@@ -31,7 +31,11 @@ export default ({Vue, store, router}) => {
 }
 ```
 
-2. 主系统中加载模块
+2. 打包成umd模块js文件
+
+webpack和vue-cli都有相关方法。
+
+3. 主系统中加载模块
 
 ```javascript
 import VueRouter from 'vue-router'
