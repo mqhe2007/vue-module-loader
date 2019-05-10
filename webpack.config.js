@@ -35,11 +35,9 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    () =>
-      process.env.NODE_ENV === 'development' &&
-      new HtmlWebpackPlugin({
-        title: '加载中……',
-        template: 'dev/index.html'
-      })
+    new HtmlWebpackPlugin({
+      title: '加载中……',
+      template: 'dev/index.html'
+    })
   ]
 }

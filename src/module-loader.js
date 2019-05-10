@@ -1,4 +1,4 @@
-export default function(moduleData) {
+export default (context) => function(moduleData) {
   if (typeof moduleData === 'object') {
     let promiseAll = []
     for (let moduleName in moduleData) {
@@ -8,7 +8,7 @@ export default function(moduleData) {
             let script = document.createElement('script')
             script.src = moduleData[moduleName]
             script.onload = () => {
-              window[moduleName](this)
+              window[moduleName](context)
               resolve()
             }
             script.onerror = () => {
@@ -21,8 +21,9 @@ export default function(moduleData) {
     }
     return Promise.all(promiseAll)
   } else if (typeof moduleData === 'function'){
-    moduleData(this)
+    moduleData(context)
+    return Promise.resolve()
   } else {
-    console.error('参数错误')
+    return Promise.reject('参数错误')
   }
 }

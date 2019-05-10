@@ -16,9 +16,35 @@ yarn add vue-module-loader
 
 ## 使用
 
+
+1. 编写模块
+
 ```javascript
+import routes from './routes.js'
+import storeModule from './storeModule.js'
+import customMethods from './customMethods.js'
+
+export default ({Vue, store, router}) => {
+  Vue.prototype.$customMethods = customMethods
+  router.addRoutes(routes)
+  store.registerModule('moduleName', storeModule)
+}
+```
+
+2. 主系统中加载模块
+
+```javascript
+import VueRouter from 'vue-router'
+import Vuex from 'vuex'
 import vueModuleLoader from 'vue-module-loader'
-Vue.use(vueModuleLoader)
+Vue.use(VueRouter)
+Vue.use(Vuex)
+const router = new VueRouter()
+const store = new Vuex.Store()
+Vue.use(vueModuleLoader, {
+  router, // 合并路由配置必传。
+  store // 合并状态配置必传。
+})
 let app = new Vue({
   router,
   store,

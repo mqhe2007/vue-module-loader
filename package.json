@@ -1,6 +1,6 @@
 {
   "name": "vue-module-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Can load a vue module remotely.",
   "author": "mqhe2007 <122274389@qq.com>",
   "homepage": "https://mengqinghe.com",
