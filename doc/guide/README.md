@@ -1,7 +1,11 @@
 # 指南
 
 vue-module-loader 是基于 Vue 生态的微前端模块加载器，本质上是[Vue 插件](https://cn.vuejs.org/v2/guide/plugins.html)。
-使用了 vue-module-loader 的工程可以构建成独立的应用程序包部署运行，也可以加载其他[符合规范的微前端模块](https://cn.vuejs.org/v2/guide/plugins.html)，让你的工程秒变微前端架构。
+使用了 vue-module-loader 的工程可以构建成独立的应用程序包部署运行，也可以加载其他[符合规范的微前端模块](#编写微前端模块)，让你的工程秒变微前端架构。
+
+## 进群交流
+
+![qq群](../images/group.png)
 
 ## 快速上手
 

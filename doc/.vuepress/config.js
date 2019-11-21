@@ -17,7 +17,7 @@ module.exports = {
       },
       {
         text: 'github',
-        link: 'https://github.com/mqhe2007/admincraft'
+        link: 'https://github.com/mqhe2007/vue-module-loader'
       }
     ],
     sidebar: {
