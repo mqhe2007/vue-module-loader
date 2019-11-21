@@ -1,18 +1,20 @@
 # vue-module-loader
 
 vue-module-loader 是一个 Vue 插件，让你使用类似于[微前端](https://www.thoughtworks.com/radar/techniques/micro-frontends)的架构开发 Vue 应用。
+
 Let you use the micro front-end architecture to build Vue applications
-推荐使用`admincraft-cli`生成样板工程。
+
+推荐使用`vue-module-cli`生成样板工程。
 
 ```
-$ yarn global add admincraft-cli
-$ vmm init
+$ yarn global add vue-module-cli
+$ vmc create "dir"
 ```
 
 ## 安装
 
 ```
-yarn add vue-module-loader@next
+yarn add vue-module-loader
 ```
 
 ## 快速开始

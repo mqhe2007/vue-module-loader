@@ -23,7 +23,7 @@ vue-module-loader 是基于 Vue 生态的微前端模块加载器，本质上是
 2. 创建工程
 
    ```bash
-   vm create "dir"
+   vmc create "dir"
    ```
 
 ### 自由工程
