@@ -35,4 +35,4 @@ app.$moduleLoader({
 
 ## 进群交流
 
-![qq群](/group.png)
+![qq群](./images/group.png)
