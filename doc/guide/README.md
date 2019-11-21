@@ -7,7 +7,7 @@ vue-module-loader 是基于 Vue 生态的微前端模块加载器，本质上是
 
 ### 模板工程
 
-推荐使用`vue-module-cli`创建模板工程，已为您做好配置，可构建独立应用，也可构建微前端模块包。
+推荐使用`vue-module-creator`创建模板工程，已为您做好配置，可构建独立应用，也可构建微前端模块包。
 
 基于[@vue/cli](https://cli.vuejs.org/zh/) 工程，使用了以下特性：
 
@@ -17,13 +17,13 @@ vue-module-loader 是基于 Vue 生态的微前端模块加载器，本质上是
 1. 安装命令行工具
 
    ```bash
-   yarn add vue-module-cli
+   yarn add vue-module-creator
    ```
 
 2. 创建工程
 
    ```bash
-   vmc create "dir"
+   vmc create
    ```
 
 ### 自由工程

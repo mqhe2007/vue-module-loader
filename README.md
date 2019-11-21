@@ -4,11 +4,11 @@ vue-module-loader 是一个 Vue 插件，让你使用类似于[微前端](https:
 
 Let you use the micro front-end architecture to build Vue applications
 
-推荐使用`vue-module-cli`生成样板工程。
+推荐使用`vue-module-creator`生成样板工程。
 
 ```
-$ yarn global add vue-module-cli
-$ vmc create "dir"
+$ yarn global add vue-module-creator
+$ vmc create
 ```
 
 ## 安装

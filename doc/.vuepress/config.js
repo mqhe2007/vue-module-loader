@@ -2,7 +2,7 @@ const path = require('path')
 module.exports = {
   base: '/vue-module-loader/',
   title: 'vue-module-loader',
-  dest: path.resolve(__dirname, '../../doc_dist'),
+  dest: path.resolve(__dirname, '../../docs'),
   description: 'vue.js项目的微前端模块加载器',
   themeConfig: {
     sidebarDepth: 2,
