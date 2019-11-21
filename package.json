@@ -1,39 +1,34 @@
 {
   "name": "vue-module-loader",
   "version": "0.1.1",
-  "description": "Can load a vue module remotely.",
+  "description": "Let you use the micro front-end architecture to build Vue applications.",
   "author": "mqhe2007 <122274389@qq.com>",
   "homepage": "https://mengqinghe.com",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
   "keywords": [
     "vue",
-    "moudle",
-    "remote-module"
+    "admin",
+    "vue-admin",
+    "vue-ui",
+    "admincraft"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mqhe2007/vue-module-loader"
+    "url": "https://github.com/mqhe2007/admincraft"
   },
   "scripts": {
-    "serve": "cross-env NODE_ENV=development webpack-dev-server",
-    "build": "cross-env NODE_ENV=production webpack --progress"
+    "dev": "rollup -c -w",
+    "build": "rollup -c",
+    "doc:dev": "vuepress dev doc",
+    "doc:build": "vuepress build doc"
   },
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/preset-env": "^7.3.4",
-    "babel-loader": "^8.0.5",
-    "clean-webpack-plugin": "^2.0.0",
-    "cross-env": "^5.2.0",
-    "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.2.1",
-    "vue": "^2.6.9",
-    "vue-meta": "^1.5.8",
-    "vue-router": "^3.0.2",
-    "vuex": "^3.1.0"
+    "rollup-plugin-terser": "^5.1.2",
+    "vuepress": "^1.2.0"
   }
 }

@@ -1,64 +1,31 @@
 # vue-module-loader
 
-可以远程加载一个 [vue 模块](https://mqhe2007.github.io/admincraft/guide/#%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97)。
+vue-module-loader 是一个 Vue 插件，让你使用类似于[微前端](https://www.thoughtworks.com/radar/techniques/micro-frontends)的架构开发 Vue 应用。
+Let you use the micro front-end architecture to build Vue applications
+推荐使用`admincraft-cli`生成样板工程。
 
-Can load a [vue module](https://mqhe2007.github.io/admincraft/guide/#%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97) remotely.
-
-更强大的分布式前端开发架构，请使用[Admincraft](https://mqhe2007.github.io/admincraft/)
-
-More powerful distributed front-end development architecture，please use [Admincraft](https://mqhe2007.github.io/admincraft/)
+```
+$ yarn global add admincraft-cli
+$ vmm init
+```
 
 ## 安装
 
 ```
-yarn add vue-module-loader
+yarn add vue-module-loader@next
 ```
 
-## 使用
-
-
-1. [编写模块](https://mqhe2007.github.io/admincraft/guide/#%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97)代码
+## 快速开始
 
 ```javascript
-import routes from './routes.js'
-import storeModule from './storeModule.js'
-import customMethods from './customMethods.js'
-
-export default ({Vue, store, router}) => {
-  Vue.prototype.$customMethods = customMethods
-  router.addRoutes(routes)
-  store.registerModule('moduleName', storeModule)
-}
-```
-
-2. 打包成umd模块js文件
-
-webpack和vue-cli都有相关方法。
-
-3. 主系统中加载模块
-
-```javascript
-import VueRouter from 'vue-router'
-import Vuex from 'vuex'
+// 导入插件
+import Vue from 'vue'
 import vueModuleLoader from 'vue-module-loader'
-Vue.use(VueRouter)
-Vue.use(Vuex)
-const router = new VueRouter()
-const store = new Vuex.Store()
-Vue.use(vueModuleLoader, {
-  router, // 合并路由配置必传。
-  store // 合并状态配置必传。
+// 安装使用，配置项中router实例和store实例必传。
+Vue.use(vueModuleLoader, { router, store })
+const app = new Vue({...})
+// 使用插件提供的能力
+app.$moduleLoader({
+  module1: '//domain.com/module1.js'
 })
-let app = new Vue({
-  router,
-  store,
-  render: h => h('h1', 'vue-module-loader')
-})
-const moduleByUrl = {
-  a: 'http://xx.xxx.com/a.js',
-  b: 'http://xx.xxx.com/b.js'
-}
-const moduleByLocal = require('./module-a.js')
-app.$moduleLoader(moduleByUrl)
-app.$moduleLoader(moduleByLocal)
 ```
