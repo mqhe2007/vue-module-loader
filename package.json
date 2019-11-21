@@ -11,10 +11,9 @@
   "license": "MIT",
   "keywords": [
     "vue",
-    "admin",
-    "vue-admin",
-    "vue-ui",
-    "admincraft"
+    "vue-module",
+    "vue-module-loader",
+    "micro-front-end"
   ],
   "repository": {
     "type": "git",
