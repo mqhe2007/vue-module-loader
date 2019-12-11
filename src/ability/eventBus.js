@@ -7,6 +7,10 @@ export default function() {
      * @param {any} payload 事件载荷
      */
     emit(eventName, payload) {
+      if (!events[eventName])
+        return console.warn(
+          `${eventName}事件触发了，但是没有监听者，什么都不会发生。`
+        )
       for (let func of events[eventName].values()) {
         func(payload)
       }
