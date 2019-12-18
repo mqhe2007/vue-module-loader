@@ -77,7 +77,7 @@ vue-module-loader 是基于 Vue 生态的微前端模块加载器，本质上是
 
 **module.js**
 
-微前端模块新增了`/src/module.js`文件作为模块业务代码的入口文件，此文件导出一个匿名函数，函数内部调用`this`（Vue 实例）中安装的生态工具 API 进行数据合并。
+微前端模块新增了`/src/module.js`文件作为模块业务代码的入口文件，此文件导出一个匿名函数，函数内部调用`this`（指向 Vue 实例）中安装的生态工具 API 进行数据合并。另外函数还接收`Vue构造对象`作为唯一参数，用户可以拿`Vue`做自由发挥。
 
 ```js
 // 模块的路由配置数组
@@ -88,7 +88,8 @@ import storeModule from './store'
 // 模块信息
 const moduleInfo = require('../package.json')
 // 导出模块函数
-export default () => {
+export default function(Vue) {
+  // 参数Vue: vue构造对象
   // 本函数中的this指向vue实例的引用
   // 合并路由
   this.$router.$addRoutes(routes)
