@@ -21,7 +21,9 @@ vue-module-loader 是基于 Vue 生态的微前端模块加载器，本质上是
 1. 安装命令行工具
 
    ```bash
-   yarn add vue-module-creator
+   yarn global add vue-module-creator
+   # OR
+   npm install -g vue-module-creator
    ```
 
 2. 创建工程
