@@ -5,8 +5,10 @@
   "author": "mqhe2007 <122274389@qq.com>",
   "homepage": "https://mengqinghe.com",
   "main": "dist/index.js",
+  "typings": "types/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "license": "MIT",
   "keywords": [
