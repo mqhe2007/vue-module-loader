@@ -6,12 +6,19 @@ export declare class DynamicComponent {
      * @param component 组件
      * @param position 插槽，默认GLOBAL
      */
-    create(component: Vue, position: string): void;
+    create(component: Vue, position?: string): void;
+
+    /**
+     * 获取动态组件
+     * @param name 组件名称
+     * @param position 插槽，默认GLOBAL
+     */
+    obtain(name: string, position?: string): Vue;
 
     /**
      * 删除动态组件方法
      * @param name 组件名称
      * @param position 插槽，默认GLOBAL
      */
-    destroy(name: string, position: string): void;
+    destroy(name: string, position?: string): void;
 }

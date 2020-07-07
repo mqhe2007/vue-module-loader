@@ -25,7 +25,8 @@
     "dev": "rollup -c -w",
     "build": "rollup -c",
     "doc:dev": "vuepress dev doc",
-    "doc:build": "vuepress build doc"
+    "doc:build": "vuepress build doc",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {},
   "devDependencies": {
