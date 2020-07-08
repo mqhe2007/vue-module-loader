@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import { Component } from 'vue'
 
 export declare class DynamicComponent {
     /**
@@ -6,14 +6,14 @@ export declare class DynamicComponent {
      * @param component 组件
      * @param position 插槽，默认GLOBAL
      */
-    create(component: Vue, position?: string): void;
+    create(component: Component, position?: string): void;
 
     /**
      * 获取动态组件
      * @param name 组件名称
      * @param position 插槽，默认GLOBAL
      */
-    obtain(name: string, position?: string): Vue;
+    obtain(name: string, position?: string): Component;
 
     /**
      * 删除动态组件方法
