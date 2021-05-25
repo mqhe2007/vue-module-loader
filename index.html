@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>develop</title>
+  </head>
+  <body>
+    <script type="module">
+      import vueModuleLoader from "/src/main.ts";
+      const app = Vue.createApp({
+        data() {
+          return {
+            msg: "hello",
+          };
+        },
+      }).use(vueModuleLoader);
+      app.config.globalProperties.$loader([
+        "http://home.mengqinghe.com:5004/tmp/vue-module-loader-foo.js",
+      ]);
+    </script>
+  </body>
+</html>
