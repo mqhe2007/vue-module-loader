@@ -1,12 +1,19 @@
 {
-  "name": "vue-module-loader-next",
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "docs:dev": "vuepress dev docsrc",
-    "types": "tsc"
+  "name": "vue-module-loader",
+  "version": "3.0.0",
+  "description": "Let you use the micro front-end architecture to build Vue applications.",
+  "author": "mqhe2007 <122274389@qq.com>",
+  "homepage": "https://mengqinghe.com",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "vue-module",
+    "vue-module-loader",
+    "micro-front-end"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mqhe2007/vue-module-loader"
   },
   "files": [
     "dist"
@@ -18,6 +25,10 @@
       "import": "./dist/vue-module-loader.es.js",
       "require": "./dist/vue-module-loader.umd.js"
     }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
   },
   "devDependencies": {
     "@types/node": "^14.14.31",
