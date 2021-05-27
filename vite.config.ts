@@ -7,5 +7,10 @@ export default defineConfig({
       entry: resolve(__dirname, "src/main.ts"),
       name: "vueModuleLoader",
     },
+    terserOptions: {
+      format: {
+        comments: "all",
+      },
+    },
   },
 });
