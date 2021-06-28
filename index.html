@@ -9,17 +9,15 @@
   </head>
   <body>
     <script type="module">
-      import vueModuleLoader from "/src/main.ts";
+      import VML, { useModule } from "/src/main.ts";
       const app = Vue.createApp({
         data() {
           return {
             msg: "hello",
           };
         },
-      }).use(vueModuleLoader);
-      app.config.globalProperties.$loader([
-        "http://home.mengqinghe.com:5004/tmp/vue-module-loader-foo.js",
-      ]);
+      }).use(VML, Vue);
+      useModule("http://127.0.0.1:8887/vite-module.iife.js");
     </script>
   </body>
 </html>

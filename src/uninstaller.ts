@@ -7,18 +7,19 @@ import IModuleUninstallerMap from "./types/module-uninstaller-map-type";
 
 const moduleUninstallerMap: IModuleUninstallerMap = {};
 
-export function store(moduleName: string, uninstaller: (app: App) => void) {
+export default function(moduleName: string, uninstaller: (app: App) => void) {
   moduleUninstallerMap[moduleName] = uninstaller;
 }
-export function uninstall(app: App) {
-  return function(moduleName: string) {
-    moduleUninstallerMap[moduleName](app);
-  };
+export function listUnistaller() {
+  return moduleUninstallerMap;
 }
-export function clear(app: App) {
-  return function() {
-    for (let moduleName in moduleUninstallerMap) {
-      moduleUninstallerMap[moduleName](app);
-    }
-  };
+export async function uninstall(moduleName: string) {
+  const app = (window as any)[Symbol.for("___VUE_APP___")];
+  moduleUninstallerMap[moduleName](app);
+}
+export async function clear() {
+  const app = (window as any)[Symbol.for("___VUE_APP___")];
+  for (let moduleName in moduleUninstallerMap) {
+    moduleUninstallerMap[moduleName](app);
+  }
 }
