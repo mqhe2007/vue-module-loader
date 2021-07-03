@@ -1,18 +1,21 @@
-import { App } from "@vue/runtime-core";
-import { version } from "../package.json";
-import useModule from "./use-module";
-export default function(app: App, vue: any) {
-  if (!vue?.h) {
-    (window as any)[Symbol.for("___VML_OK___")] = false;
-    throw new Error("[vue-module-loader]: 插件配置错误，请传入Vue全局对象");
+import { App } from "vue";
+import { Context } from "./interfaces";
+
+export default function(app: App, Vue: Context["Vue"]) {
+  if (!Vue) {
+    throw new Error(`[vue-module-loader]: use插件时必须传入Vue对象`);
+  } else {
+    if (!Vue.version?.startsWith("3")) {
+      throw new Error(`[vue-module-loader]: 本插件仅适用于vue3`);
+    } else {
+      window[Symbol.for("___VML_CONTEXT___")] = {
+        Vue,
+      };
+      if (app) {
+        window[Symbol.for("___VML_CONTEXT___")]["app"] = app;
+      }
+    }
   }
-  if (!vue?.version?.startsWith("3")) {
-    (window as any)[Symbol.for("___VML_OK___")] = false;
-    throw new Error(`[vue-module-loader]: 当前插件v${version}仅适用于vue3`);
-  }
-  (window as any)[Symbol.for("___VUE___")] = vue;
-  (window as any)[Symbol.for("___VUE_APP___")] = app;
-  (window as any)[Symbol.for("___VML_OK___")] = true;
 }
-export { useModule };
+export { useModule } from "./use-module";
 export { uninstall, clear, listUnistaller } from "./uninstaller";
