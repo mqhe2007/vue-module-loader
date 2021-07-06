@@ -33,7 +33,7 @@ async function useModule(moduleData: any, Vue?: Context["Vue"]): Promise<void> {
     const moduleDataFromUrl = moduleStringFun(
       window[Symbol.for("___VML_CONTEXT___")].Vue
     );
-    return await fireModule(moduleDataFromUrl);
+    return await fireModule(moduleDataFromUrl, moduleData.match(/\S*\//)[0]);
   }
 }
 
