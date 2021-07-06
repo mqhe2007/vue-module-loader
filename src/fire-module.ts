@@ -8,12 +8,10 @@ function loadStyle(moduleData, moduleHostUrl): Promise<void> {
     style.crossOrigin = "anonymous";
     style.href = moduleHostUrl + "style.css";
     style.onload = () => {
-      console.log("样式表加载完成");
       resolve();
     };
     style.onerror = () => {
-      console.log("样式表加载失败");
-      reject();
+      resolve();
     };
     document.head.append(style);
   });
