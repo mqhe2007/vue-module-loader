@@ -1,6 +1,6 @@
 # vue-module-loader
 
-> [next](https://github.com/mqhe2007/vue-module-loader/tree/next)分支支持 Vue3，并已进入候选测试阶段，欢迎验证，但是请勿用于生产项目。
+> [next](https://github.com/mqhe2007/vue-module-loader/tree/next)分支支持 Vue3，并已进入候选测试阶段，欢迎验证。
 
 vue-module-loader 是一个 Vue 插件，让你使用类似于[微前端](https://www.thoughtworks.com/radar/techniques/micro-frontends)的架构开发 Vue 应用。
 
