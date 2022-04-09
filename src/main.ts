@@ -19,3 +19,4 @@ export default function(app: App, Vue: Context["Vue"]) {
 }
 export { useModule } from "./use-module";
 export { uninstall, clear, listUnistaller } from "./uninstaller";
+export { useContext } from "./use-context";
