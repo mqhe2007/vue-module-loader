@@ -32,16 +32,16 @@
     "build": "vite build"
   },
   "devDependencies": {
-    "@types/node": "^14.14.31",
-    "typescript": "^4.1.3",
-    "vite": "^2.0.1",
-    "vite-plugin-dts": "^0.5.2",
-    "vue-router": "^4.0.4",
-    "vuepress": "^1.8.2",
-    "vuex": "^4.0.0"
+    "@types/node": "^14.18.21",
+    "typescript": "^4.7.4",
+    "vite": "^2.9.12",
+    "vite-plugin-dts": "^1.2.0",
+    "vue-router": "^4.0.16",
+    "vuepress": "^1.9.7",
+    "vuex": "^4.0.2"
   },
   "dependencies": {
-    "@qingjin/jsuper": "^1.2.1",
-    "vue": "^3.1.3"
+    "@qingjin/jsuper": "^1.3.1",
+    "vue": "^3.2.37"
   }
 }
