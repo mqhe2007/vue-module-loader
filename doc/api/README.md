@@ -63,7 +63,7 @@ dynamicComponent 状态库中默认有插槽位置`GLOBAL`，当调用下列方�
 
 ```javascript
 import AComponent from './AComponent.vue'
-this.$dynamicComponent.add(AComponent, 'HEADER')
+this.$dynamicComponent.create(AComponent, 'HEADER')
 ```
 
 ### .destroy
@@ -79,7 +79,7 @@ this.$dynamicComponent.add(AComponent, 'HEADER')
 - 用法:
 
 ```javascript
-this.$dynamicComponent.remove('componentName', 'HEADER')
+this.$dynamicComponent.destroy('componentName', 'HEADER')
 ```
 
 ## vm.$eventBus
