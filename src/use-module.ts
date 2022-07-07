@@ -3,7 +3,6 @@ import { ModuleOptions } from "./interfaces";
 /**
  * 使用模块
  * @param moduleData 模块数据，可以是模块定义对象或者是模块资源url.
- * @param Vue 全局Vue对象，可以是模块定义对象或者是模块资源url.
  */
 async function useModule(moduleData: ModuleOptions): Promise<void>;
 async function useModule(moduleData: string): Promise<void>;
