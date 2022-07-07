@@ -1,14 +1,10 @@
-import { App, CreateAppFunction } from "vue";
+import { App } from "vue";
 export interface Context {
-  // Vue全局对象
-  Vue: {
-    readonly createApp: CreateAppFunction<any>;
-    readonly [propName: string]: any;
-  };
   // Vue应用实例
   app: App;
+  [propName: string]: any;
 }
-export interface IModuleUninstallerMap {
+export interface ModuleUninstallerMap {
   [propName: string]: (context: Context) => void;
 }
 export interface ModuleOptions {
