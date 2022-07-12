@@ -13,7 +13,7 @@ export default function (
 ) {
   moduleUninstallerMap[moduleName] = uninstaller;
 }
-export function listUnistaller() {
+export function list() {
   return moduleUninstallerMap;
 }
 export async function uninstall(moduleName: string) {
