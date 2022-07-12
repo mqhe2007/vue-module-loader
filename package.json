@@ -1,15 +1,9 @@
 {
   "name": "vue-module-loader",
-  "version": "1.0.3",
+  "version": "3.1.1",
   "description": "Let you use the micro front-end architecture to build Vue applications.",
   "author": "mqhe2007 <122274389@qq.com>",
   "homepage": "https://mengqinghe.com",
-  "main": "dist/index.js",
-  "typings": "types/index.d.ts",
-  "files": [
-    "dist",
-    "types"
-  ],
   "license": "MIT",
   "keywords": [
     "vue",
@@ -19,17 +13,35 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mqhe2007/admincraft"
+    "url": "https://github.com/mqhe2007/vue-module-loader"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vue-module-loader.umd.js",
+  "module": "./dist/vue-module-loader.es.js",
+  "types": "./dist/src/main.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-module-loader.es.js",
+      "require": "./dist/vue-module-loader.umd.js"
+    }
   },
   "scripts": {
-    "dev": "rollup -c -w",
-    "build": "rollup -c",
-    "doc:dev": "vuepress dev doc",
-    "doc:build": "vuepress build doc"
+    "dev": "vite build --watch",
+    "build": "vite build"
   },
-  "dependencies": {},
   "devDependencies": {
-    "rollup-plugin-terser": "^5.3.1",
-    "vuepress": "^1.9.7"
+    "@types/node": "^18.0.3",
+    "typescript": "^4.7.4",
+    "vite": "^2.9.13",
+    "vite-plugin-dts": "^1.2.1",
+    "vue-router": "^4.1.1",
+    "vuepress": "^1.9.7",
+    "vuex": "^4.0.2"
+  },
+  "dependencies": {
+    "@qingjin/jsuper": "^1.3.1",
+    "vue": "^3.2.37"
   }
 }
