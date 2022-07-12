@@ -1,7 +1,4 @@
-import { App } from "vue";
 export interface Context {
-  // Vue应用实例
-  app: App;
   [propName: string]: any;
 }
 export interface ModuleUninstallerMap {

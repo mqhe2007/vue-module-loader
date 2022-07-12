@@ -2,12 +2,12 @@ lockfileVersion: 5.4
 
 specifiers:
   '@qingjin/jsuper': ^1.3.1
-  '@types/node': ^14.18.21
+  '@types/node': ^18.0.3
   typescript: ^4.7.4
   vite: ^2.9.13
   vite-plugin-dts: ^1.2.1
   vue: ^3.2.37
-  vue-router: ^4.1.0
+  vue-router: ^4.1.1
   vuepress: ^1.9.7
   vuex: ^4.0.2
 
@@ -16,11 +16,11 @@ dependencies:
   vue: 3.2.37
 
 devDependencies:
-  '@types/node': 14.18.21
+  '@types/node': 18.0.3
   typescript: 4.7.4
   vite: 2.9.13
   vite-plugin-dts: 1.2.1_vite@2.9.13
-  vue-router: 4.1.0_vue@3.2.37
+  vue-router: 4.1.2_vue@3.2.37
   vuepress: 1.9.7
   vuex: 4.0.2_vue@3.2.37
 
@@ -1393,26 +1393,26 @@ packages:
     resolution: {integrity: sha512-ALYone6pm6QmwZoAgeyNksccT9Q4AWZQ6PvfwR37GT6r6FWUPguq6sUmNGSMV2Wr761oQoBxwGGa6DR5o1DC9g==}
     dependencies:
       '@types/connect': 3.4.35
-      '@types/node': 14.18.21
+      '@types/node': 18.0.3
     dev: true
 
   /@types/connect-history-api-fallback/1.3.5:
     resolution: {integrity: sha512-h8QJa8xSb1WD4fpKBDcATDNGXghFj6/3GRWG6dhmRcu0RX1Ubasur2Uvx5aeEwlf0MwblEC2bMzzMQntxnw/Cw==}
     dependencies:
       '@types/express-serve-static-core': 4.17.29
-      '@types/node': 14.18.21
+      '@types/node': 18.0.3
     dev: true
 
   /@types/connect/3.4.35:
     resolution: {integrity: sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==}
     dependencies:
-      '@types/node': 14.18.21
+      '@types/node': 18.0.3
     dev: true
 
   /@types/express-serve-static-core/4.17.29:
     resolution: {integrity: sha512-uMd++6dMKS32EOuw1Uli3e3BPgdLIXmezcfHv7N4c1s3gkhikBplORPpMq3fuWkxncZN1reb16d5n8yhQ80x7Q==}
     dependencies:
-      '@types/node': 14.18.21
+      '@types/node': 18.0.3
       '@types/qs': 6.9.7
       '@types/range-parser': 1.2.4
     dev: true
@@ -1430,7 +1430,7 @@ packages:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
     dependencies:
       '@types/minimatch': 3.0.5
-      '@types/node': 14.18.21
+      '@types/node': 18.0.3
     dev: true
 
   /@types/highlight.js/9.12.4:
@@ -1440,7 +1440,7 @@ packages:
   /@types/http-proxy/1.17.9:
     resolution: {integrity: sha512-QsbSjA/fSk7xB+UXlCT3wHBy5ai9wOcNDWwZAtud+jXhwOM3l+EYZh8Lng4+/6n8uar0J7xILzqftJdJ/Wdfkw==}
     dependencies:
-      '@types/node': 14.18.21
+      '@types/node': 18.0.3
     dev: true
 
   /@types/json-schema/7.0.11:
@@ -1450,7 +1450,7 @@ packages:
   /@types/keyv/3.1.4:
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
     dependencies:
-      '@types/node': 14.18.21
+      '@types/node': 18.0.3
     dev: true
 
   /@types/linkify-it/3.0.2:
@@ -1482,8 +1482,8 @@ packages:
     resolution: {integrity: sha512-yxDeaQIAJlMav7fH5AQqPH1u8YIuhYJXYBzxaQ4PifsU0GDO38MSdmEDeRlIxrKbC6NbEaaEHDanWb+y30U8SQ==}
     dev: true
 
-  /@types/node/14.18.21:
-    resolution: {integrity: sha512-x5W9s+8P4XteaxT/jKF0PSb7XEvo5VmqEWgsMlyeY4ZlLK8I6aH6g5TPPyDlLAep+GYf4kefb7HFyc7PAO3m+Q==}
+  /@types/node/18.0.3:
+    resolution: {integrity: sha512-HzNRZtp4eepNitP+BD6k2L6DROIDG4Q0fm4x+dwfsr6LGmROENnok75VGw40628xf+iR24WeMFcHuuBDUAzzsQ==}
     dev: true
 
   /@types/q/1.5.5:
@@ -1501,14 +1501,14 @@ packages:
   /@types/responselike/1.0.0:
     resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
     dependencies:
-      '@types/node': 14.18.21
+      '@types/node': 18.0.3
     dev: true
 
   /@types/serve-static/1.13.10:
     resolution: {integrity: sha512-nCkHGI4w7ZgAdNkrEu0bv+4xNV/XDqW+DydknebMOQwkpDGx8G+HTlj7R7ABI8i8nKxVw0wtKPi1D+lPOkh4YQ==}
     dependencies:
       '@types/mime': 1.3.2
-      '@types/node': 14.18.21
+      '@types/node': 18.0.3
     dev: true
 
   /@types/source-list-map/0.1.2:
@@ -1540,7 +1540,7 @@ packages:
   /@types/webpack-sources/3.2.0:
     resolution: {integrity: sha512-Ft7YH3lEVRQ6ls8k4Ff1oB4jN6oy/XmU6tQISKdhfh+1mR+viZFphS6WL0IrtDOzvefmJg5a0s7ZQoRXwqTEFg==}
     dependencies:
-      '@types/node': 14.18.21
+      '@types/node': 18.0.3
       '@types/source-list-map': 0.1.2
       source-map: 0.7.4
     dev: true
@@ -1548,7 +1548,7 @@ packages:
   /@types/webpack/4.41.32:
     resolution: {integrity: sha512-cb+0ioil/7oz5//7tZUSwbrSAN/NWHrQylz5cW8G0dWTcF/g+/dSdMlKVZspBYuMAN1+WnwHrkxiRrLcwd0Heg==}
     dependencies:
-      '@types/node': 14.18.21
+      '@types/node': 18.0.3
       '@types/tapable': 1.0.8
       '@types/uglify-js': 3.16.0
       '@types/webpack-sources': 3.2.0
@@ -3320,7 +3320,7 @@ packages:
       lodash: ^4.17.20
       marko: ^3.14.4
       mote: ^0.2.0
-      mustache: ^4.0.1
+      mustache: ^3.0.0
       nunjucks: ^3.2.2
       plates: ~0.4.11
       pug: ^3.0.0
@@ -9458,8 +9458,8 @@ packages:
     resolution: {integrity: sha512-x+/DLAJZv2mcQ7glH2oV9ze8uPwcI+H+GgTgTmb5I55bCgY3+vXWIsqbYUzbBSZnwFHEJku4eoaH/x98veyymQ==}
     dev: true
 
-  /vue-router/4.1.0_vue@3.2.37:
-    resolution: {integrity: sha512-A+dYO0ZXLJFZ40ebW3XtqehCW0Wv2xNH4lFddOByDja4NtItEdyirrShTlvD3UA4xc5a5mG2RRI30BusYpOb9g==}
+  /vue-router/4.1.2_vue@3.2.37:
+    resolution: {integrity: sha512-5BP1qXFncVRwgV/XnqzsKApdMjQPqWIpoUBdL1ynz8HyLxIX/UDAx7Ql2BjmA5CXT/p61JfZvkpiFWFpaqcfag==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
