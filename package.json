@@ -1,6 +1,6 @@
 {
   "name": "vue-module-loader",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "Let you use the micro front-end architecture to build Vue applications.",
   "author": "mqhe2007 <122274389@qq.com>",
   "homepage": "https://mengqinghe.com",
@@ -20,7 +20,7 @@
   ],
   "main": "./dist/vue-module-loader.umd.js",
   "module": "./dist/vue-module-loader.es.js",
-  "types": "./dist/src/main.d.ts",
+  "types": "./dist/main.d.ts",
   "exports": {
     ".": {
       "import": "./dist/vue-module-loader.es.js",
