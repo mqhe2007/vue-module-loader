@@ -23,17 +23,17 @@ export default async function(
   const context: Context = window[Symbol.for("___VML_CONTEXT___")];
   let installReturn;
   try {
-    console.log(`[vue-module-loader]: 开始加载模块「${moduleData.name}」...`);
+    console.log(`[vue-module-loader]: 模块「${moduleData.name}」开始加载...`);
     if (moduleHostUrl) {
       await loadStyle(moduleData, moduleHostUrl);
     }
     installReturn = await moduleData.install(context);
-    if (moduleData.uninstall)
-      uninstallCache(moduleData.name, moduleData.uninstall);
-    console.log(`[vue-module-loader]: 模块「${moduleData.name}」加载完成`);
+    console.log(`[vue-module-loader]: 模块「${moduleData.name}」加载完成。`);
+    // 缓存模块卸载方法，记录已加载模块清单
+    uninstallCache(moduleData.name, moduleData.uninstall);
   } catch (error) {
     console.error(
-      `[vue-module-loader]: 模块「${moduleData.name}」加载错误`,
+      `[vue-module-loader]: 模块「${moduleData.name}」加载错误！`,
       error
     );
     installReturn = error;

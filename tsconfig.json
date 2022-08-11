@@ -2,7 +2,6 @@
   "compilerOptions": {
     "resolveJsonModule": true,
     "lib": ["esnext", "dom"],
-    "types": ["vite/client"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts"]
 }
