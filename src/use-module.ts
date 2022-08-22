@@ -3,14 +3,15 @@ import fireModule from "./fire-module";
 import { Context, ModuleOptions } from "./interfaces";
 /**
  * 使用模块
- * @param moduleData 模块数据，可以是模块定义对象或者是模块资源url.
+ * @param moduleData 模块数据，可以是模块定义对象或者是模块资源url。
+ * @param ctx 上下文对象，如果不传，则使用默认上下文对象。
  */
 async function useModule(
   moduleData: ModuleOptions,
-  ctx: Context
+  ctx?: Context
 ): Promise<void>;
-async function useModule(moduleData: string, ctx: Context): Promise<void>;
-async function useModule(moduleData: any, ctx: Context): Promise<void> {
+async function useModule(moduleData: string, ctx?: Context): Promise<void>;
+async function useModule(moduleData: any, ctx?: Context): Promise<void> {
   const existingContext = window[Symbol.for("___VML_CONTEXT___")];
   if (!existingContext) {
     createContext(ctx);
