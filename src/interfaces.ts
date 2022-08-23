@@ -7,5 +7,5 @@ export interface ModuleUninstallerMap {
 export interface ModuleOptions {
   name: string;
   install: (context: Context) => any;
-  uninstall: (context: Context) => any;
+  uninstall?: (context: Context) => any;
 }
