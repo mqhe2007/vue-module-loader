@@ -21,9 +21,10 @@
   "main": "./dist/vue-module-loader.umd.js",
   "module": "./dist/vue-module-loader.es.js",
   "types": "./dist/main.d.ts",
+  "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/vue-module-loader.es.js",
+      "import": "./dist/vue-module-loader.js",
       "require": "./dist/vue-module-loader.umd.js"
     }
   },
@@ -32,13 +33,13 @@
     "build": "vite build"
   },
   "devDependencies": {
-    "@types/node": "^18.0.3",
+    "@types/node": "^18.8.5",
     "typescript": "^4.7.4",
-    "vite": "^2.9.13",
-    "vite-plugin-dts": "^1.2.1"
+    "vite": "^3.1.8",
+    "vite-plugin-dts": "^1.6.6"
   },
   "dependencies": {
     "@qingjin/jsuper": "^1.3.1",
-    "vue": "^3.2.37"
+    "vue": "^3.2.40"
   }
 }
