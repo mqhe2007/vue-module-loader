@@ -12,17 +12,14 @@ async function useModule(
 ): Promise<void>;
 async function useModule(moduleData: string, ctx?: Context): Promise<void>;
 async function useModule(moduleData: any, ctx?: Context): Promise<void> {
-  const existingContext = window[Symbol.for("___VML_CONTEXT___")];
-  if (!existingContext) {
-    createContext(ctx);
-  }
+  const existingContext = window[Symbol.for("___VML_CONTEXT___")] || createContext(ctx);;
   if (typeof moduleData === "object") {
     return await fireModule(moduleData);
   } else if (typeof moduleData === "string") {
     if (!existingContext.Vue) throw new Error("[vue-module-loader]: 上下文对象缺少Vue对象");
     const res = await fetch(moduleData);
     const moduleString = await res.text();
-    const moduleCode = moduleString.replace("const", "return");
+    const moduleCode = moduleString.replace(/^(var|const).+function/, 'return function');
     const moduleStringFun = Function(`return function(vue){${moduleCode}}`)();
     const moduleDataFromUrl = moduleStringFun(existingContext.Vue);
     return await fireModule(moduleDataFromUrl, moduleData.match(/\S*\//)[0]);
