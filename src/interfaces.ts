@@ -1,4 +1,12 @@
+import { App, CreateAppFunction } from "vue";
+
 export interface Context {
+  app?: App;
+  createApp?: CreateAppFunction<Element>;
+  http?: any;
+  moduleExpose?: {
+    [propName: string]: any;
+  };
   [propName: string]: any;
 }
 export interface ModuleUninstallerMap {

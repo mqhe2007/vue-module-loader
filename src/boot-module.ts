@@ -20,14 +20,13 @@ export default async function(
   moduleData: ModuleOptions,
   moduleHostUrl?: string
 ): Promise<void> {
-  const context: Context = window[Symbol.for("___VML_CONTEXT___")];
   let installReturn;
   try {
     console.log(`[vue-module-loader]: 模块「${moduleData.name}」开始加载...`);
     if (moduleHostUrl) {
       await loadStyle(moduleData, moduleHostUrl);
     }
-    installReturn = await moduleData.install(context);
+    installReturn = await moduleData.install(window[Symbol.for("___VML_CONTEXT___")]);
     console.log(`[vue-module-loader]: 模块「${moduleData.name}」加载完成。`);
     // 缓存模块卸载方法，记录已加载模块清单
     uninstallCache(moduleData.name, moduleData.uninstall);
