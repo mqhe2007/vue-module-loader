@@ -1,5 +1,5 @@
 import { App } from "vue";
-import { createContext } from "./create-Context";
+import { createContext } from "./create-context";
 import { Context } from "./interfaces";
 export function install(app: App, ctx: Context) {
   if (!app.version?.startsWith("3")) {
