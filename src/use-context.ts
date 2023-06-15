@@ -9,16 +9,19 @@ function useContext(key: string, instance: any): any {
   if (!window[Symbol.for("___VML_CONTEXT___")]) {
     createContext();
   }
-  if(instance){
+  if (instance) {
     window[Symbol.for("___VML_CONTEXT___")][key] = instance;
   }
   if (!key) {
     return window[Symbol.for("___VML_CONTEXT___")];
   } else {
-    const target = window[Symbol.for("___VML_CONTEXT___")][key];
-    if (target === undefined)
-      throw new Error(`[vue-module-loader]：上下文中不存在“${key}”`);
-    return target;
+    if (window[Symbol.for("___VML_CONTEXT___")][key] === undefined) {
+      window[Symbol.for("___VML_CONTEXT___")][key] = null;
+      console.warn(
+        `[vue-module-loader]：上下文中不存在“${key}”，既然你要用，我先帮你占个坑（初始化为null）。`
+      );
+    }
+    return window[Symbol.for("___VML_CONTEXT___")][key];
   }
 }
 export { useContext };
