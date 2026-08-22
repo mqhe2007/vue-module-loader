@@ -1,0 +1,8 @@
+allowBuilds:
+  esbuild: true
+minimumReleaseAgeExclude:
+  - esbuild@0.24.3
+overrides:
+  '@microsoft/api-extractor>lodash': 4.18.1
+  '@microsoft/api-extractor>minimatch': 3.1.4
+  '@microsoft/tsdoc-config>ajv': 6.14.0
