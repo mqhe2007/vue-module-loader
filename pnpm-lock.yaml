@@ -28,10 +28,10 @@ importers:
         version: 5.9.3
       vite:
         specifier: ^7.3.6
-        version: 7.3.6(@types/node@18.19.130)
+        version: 7.3.7(@types/node@18.19.130)
       vite-plugin-dts:
         specifier: ^5.0.3
-        version: 5.0.3(@microsoft/api-extractor@7.43.0(@types/node@18.19.130))(esbuild@0.28.2)(rollup@4.62.5)(supports-color@8.1.1)(typescript@5.9.3)(vite@7.3.6(@types/node@18.19.130))
+        version: 5.0.3(@microsoft/api-extractor@7.43.0(@types/node@18.19.130))(esbuild@0.28.2)(rollup@4.62.5)(supports-color@8.1.1)(typescript@5.9.3)(vite@7.3.7(@types/node@18.19.130))
 
 packages:
 
@@ -784,8 +784,8 @@ packages:
       vite:
         optional: true
 
-  vite@7.3.6:
-    resolution: {integrity: sha512-4XP60spRGjSZFf1qYH+dJIkK2znL3zQfl9KkOV9MkkRR/3Dls0dxaBsQPTloEc5BLXWPL9vsOxopxyKoMmDueg==}
+  vite@7.3.7:
+    resolution: {integrity: sha512-AHEzTORMbi7/7aXp7w7KZ5+DCUdSeLsJz0grY8xHpc9DHdYb0vQu6DqJfm2tOw3gDExNgPgnJTXxM6syYFHaCA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -1503,7 +1503,7 @@ snapshots:
   universalify@0.1.2:
     optional: true
 
-  unplugin-dts@1.0.3(@microsoft/api-extractor@7.43.0(@types/node@18.19.130))(esbuild@0.28.2)(rollup@4.62.5)(supports-color@8.1.1)(typescript@5.9.3)(vite@7.3.6(@types/node@18.19.130)):
+  unplugin-dts@1.0.3(@microsoft/api-extractor@7.43.0(@types/node@18.19.130))(esbuild@0.28.2)(rollup@4.62.5)(supports-color@8.1.1)(typescript@5.9.3)(vite@7.3.7(@types/node@18.19.130)):
     dependencies:
       '@rollup/pluginutils': 5.4.0(rollup@4.62.5)
       '@volar/typescript': 2.4.28(typescript@5.9.3)
@@ -1518,7 +1518,7 @@ snapshots:
       '@microsoft/api-extractor': 7.43.0(@types/node@18.19.130)
       esbuild: 0.28.2
       rollup: 4.62.5
-      vite: 7.3.6(@types/node@18.19.130)
+      vite: 7.3.7(@types/node@18.19.130)
     transitivePeerDependencies:
       - supports-color
 
@@ -1537,13 +1537,13 @@ snapshots:
   validator@13.15.35:
     optional: true
 
-  vite-plugin-dts@5.0.3(@microsoft/api-extractor@7.43.0(@types/node@18.19.130))(esbuild@0.28.2)(rollup@4.62.5)(supports-color@8.1.1)(typescript@5.9.3)(vite@7.3.6(@types/node@18.19.130)):
+  vite-plugin-dts@5.0.3(@microsoft/api-extractor@7.43.0(@types/node@18.19.130))(esbuild@0.28.2)(rollup@4.62.5)(supports-color@8.1.1)(typescript@5.9.3)(vite@7.3.7(@types/node@18.19.130)):
     dependencies:
-      unplugin-dts: 1.0.3(@microsoft/api-extractor@7.43.0(@types/node@18.19.130))(esbuild@0.28.2)(rollup@4.62.5)(supports-color@8.1.1)(typescript@5.9.3)(vite@7.3.6(@types/node@18.19.130))
+      unplugin-dts: 1.0.3(@microsoft/api-extractor@7.43.0(@types/node@18.19.130))(esbuild@0.28.2)(rollup@4.62.5)(supports-color@8.1.1)(typescript@5.9.3)(vite@7.3.7(@types/node@18.19.130))
     optionalDependencies:
       '@microsoft/api-extractor': 7.43.0(@types/node@18.19.130)
       rollup: 4.62.5
-      vite: 7.3.6(@types/node@18.19.130)
+      vite: 7.3.7(@types/node@18.19.130)
     transitivePeerDependencies:
       - '@rspack/core'
       - '@vue/language-core'
@@ -1553,7 +1553,7 @@ snapshots:
       - typescript
       - webpack
 
-  vite@7.3.6(@types/node@18.19.130):
+  vite@7.3.7(@types/node@18.19.130):
     dependencies:
       esbuild: 0.28.2
       fdir: 6.5.0(picomatch@4.0.5)
